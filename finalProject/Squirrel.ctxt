@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Squirrel
+comment0.text=\r\n\ Squirrels\ are\ game\ animals.\r\n\ \r\n\ @author\ amm21@email.uscb.edu\r\n\ @version\ final\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Controls\ which\ methods\ are\ called\ for\ each\ act\ cycle.\r\n
+comment2.params=
+comment2.target=void\ movement()
+comment2.text=\r\n\ Controls\ the\ movement\ of\ Squirrels.\r\n
+comment3.params=
+comment3.target=void\ cleanUp()
+comment3.text=\r\n\ Removes\ squirrels\ that\ have\ crossed\ the\ entire\ screen.\r\n
+numComments=4

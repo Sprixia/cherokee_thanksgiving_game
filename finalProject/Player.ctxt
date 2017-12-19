@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\r\n\ This\ is\ the\ Player\ character\ in\ the\ Cherokee\ Thanksgiving\ game.\r\n\ \r\n\ @author\ amm21@email.uscb.edu\r\n\ @version\ final\r\n
+comment1.params=
+comment1.target=Player()
+comment1.text=\r\n\ This\ is\ the\ contructor\ for\ Player.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Controls\ which\ methods\ are\ called\ for\ each\ act\ cycle.\r\n
+comment3.params=
+comment3.target=void\ checkKeyPress()
+comment3.text=\r\n\ Allows\ for\ player-controlled\ movement.\r\n
+comment4.params=
+comment4.target=void\ collisionCheck()
+comment4.text=\r\n\ Checks\ for\ collision\ with\ in-game\ objects\ and\ adjusts\ points/speed\ accordingly.\r\n
+comment5.params=
+comment5.target=void\ powerCheck()
+comment5.text=\r\n\ Checks\ if\ you've\ collected\ a\ powerup\ recently\ and\ adjusts\ speed\ accordingly.\r\n
+comment6.params=
+comment6.target=void\ monsterCheck()
+comment6.text=\r\n\ Checks\ if\ you've\ hit\ a\ monster\ recently\ and\ adjusts\ speed\ accordingly.\r\n
+numComments=7
