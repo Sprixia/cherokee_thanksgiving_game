@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Player
-comment0.text=\r\n\ This\ is\ the\ Player\ character\ in\ the\ Cherokee\ Thanksgiving\ game.\r\n\ \r\n\ @author\ amm21@email.uscb.edu\r\n\ @version\ final\r\n
+comment0.text=\r\n\ This\ is\ the\ male\ Player\ character\ in\ the\ Cherokee\ Thanksgiving\ game.\r\n\ \r\n\ @author\ amm21@email.uscb.edu\r\n\ @version\ final\r\n
 comment1.params=
 comment1.target=Player()
 comment1.text=\r\n\ This\ is\ the\ contructor\ for\ Player.\r\n

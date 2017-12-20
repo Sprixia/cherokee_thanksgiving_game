@@ -20,7 +20,7 @@ public class Berry extends Actor
     /**
      * Controls movement of the Berry.
      */
-    public void movement() 
+    public void movement() // slowly move left and counterclockwise
     {
         setLocation( getX()-1, getY() );
         turn(-1);
@@ -29,7 +29,7 @@ public class Berry extends Actor
     /**
      * Removes berries that have crossed the entire screen.
      */
-    public void cleanUp()
+    public void cleanUp() // remove at left edge of screen
     {
         if ( getX() == 0 )
         {

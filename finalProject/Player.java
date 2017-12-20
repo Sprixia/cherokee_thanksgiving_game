@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is the Player character in the Cherokee Thanksgiving game.
+ * This is the male Player character in the Cherokee Thanksgiving game.
  * 
  * @author amm21@email.uscb.edu
  * @version final
@@ -19,7 +19,8 @@ public class Player extends Actor
      */
     public Player()
     {
-        speed = 4;
+        // initializes several instance variables
+        speed = 4; // initial speed of 4 for male
         cycleCountPow = 0;
         cycleCountMons = 0;
         powerUpStatus = false;
@@ -42,12 +43,12 @@ public class Player extends Actor
      */
     public void checkKeyPress()
     {
-        if (Greenfoot.isKeyDown( "up" ))
+        if (Greenfoot.isKeyDown( "up" )) // up arrow key to move vertically up
         {
             setLocation( getX(), getY()-speed);
         } // end if up
 
-        if (Greenfoot.isKeyDown( "down"))
+        if (Greenfoot.isKeyDown( "down")) // down arrow key to move vertically down
         {
             setLocation( getX(), getY()+speed );
         } // end if down
@@ -58,7 +59,12 @@ public class Player extends Actor
      */
     public void collisionCheck()
     {
-        if ( isTouching(Pumpkin.class) )
+        /*
+         * The addScore(int points) method is in Bluffton and allows points earned or lost from collision with ingame
+         * objects to affect the player's overall score in the game.
+         */
+        
+        if ( isTouching(Pumpkin.class) ) // lose points for collecting Pumpkins
         {
             removeTouching(Pumpkin.class);
             Greenfoot.playSound("au.wav");
@@ -66,7 +72,7 @@ public class Player extends Actor
             bluffton.addScore(-50);
         } // end if
 
-        if ( isTouching(Berry.class) )
+        if ( isTouching(Berry.class) ) // lose points for collecting Berries
         {
             removeTouching(Berry.class);
             Greenfoot.playSound("au.wav");
@@ -74,25 +80,25 @@ public class Player extends Actor
             bluffton.addScore(-25);
         } // end if
 
-        if ( isTouching(Squirrel.class) )
+        if ( isTouching(Squirrel.class) ) // gain points for collecting Squirrels
         {
             removeTouching(Squirrel.class);
             Bluffton bluffton = (Bluffton)getWorld();
             bluffton.addScore(50);
         } // end if
 
-        if ( isTouching(Pig.class) )
+        if ( isTouching(Pig.class) ) // gain points for collecting Pigs
         {
             removeTouching(Pig.class);
             Bluffton bluffton = (Bluffton)getWorld();
             bluffton.addScore(100);
         } // end if
 
-        if ( isTouching(Powerup.class) && !powerUpStatus )
+        if ( isTouching(Powerup.class) && !powerUpStatus ) // Dr. Canada helped with temporary movement changes from PowerUp and Monster
         {
             removeTouching(Powerup.class);
-            speed = speed * 2;
-            powerUpStatus = true;
+            speed = speed * 2; // double speed
+            powerUpStatus = true; // triggers powerCheck method
         } // end if
 
         if ( isTouching(Monster.class) && !monsterStatus )
@@ -101,8 +107,8 @@ public class Player extends Actor
             Greenfoot.playSound("au.wav");
             Bluffton bluffton = (Bluffton)getWorld();
             bluffton.addScore(-100);
-            speed = speed / 2;
-            monsterStatus = true;
+            speed = speed / 2; // half speed
+            monsterStatus = true; // triggers monsterCheck method
         } // end if
     } // end method collisionCheck
 
@@ -113,14 +119,14 @@ public class Player extends Actor
     {
         if ( powerUpStatus )
         {
-            cycleCountPow++;
+            cycleCountPow++; // increment by 1
         } // end if
 
         if ( cycleCountPow >= 100 )
         {
-            powerUpStatus = false;
-            cycleCountPow = 0;
-            speed = 4;
+            powerUpStatus = false; // after 100 cycles, switch status to false to disable the movement buff
+            cycleCountPow = 0; // reset to 0 so this can repeat when a new PowerUp is collected
+            speed = 4; // speed back to original
         } // end if
     } // end method powerCheck
 
@@ -131,14 +137,14 @@ public class Player extends Actor
     {
         if ( monsterStatus )
         {
-            cycleCountMons++;
+            cycleCountMons++; // decrement by 1
         } // end if
 
         if ( cycleCountMons >= 100 )
         {
             monsterStatus = false;
             cycleCountMons = 0;
-            speed = 4;
+            speed = 4; 
         } // end if
     } // end method monsterCheck
 }// end class Player

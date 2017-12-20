@@ -20,16 +20,16 @@ public class Pumpkin extends Actor
     /**
      * Controls the movement of Pumpkin.
      */
-    public void movement() 
+    public void movement() // slowly move left and rotate counterclockwise
     {
-        setLocation( getX()-1, getY() );
-        turn(-1);
+        setLocation( getX()-1, getY() ); 
+        turn(-1); 
     } // end method movement
 
     /**
      * Removes Pumpkin that has crossed the entire screen.
      */
-    public void cleanUp()
+    public void cleanUp() // remove at left edge of world
     {
         if ( getX() == 0 )
         {

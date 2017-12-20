@@ -13,13 +13,14 @@ public class PlayerF extends Actor
     private int cycleCountMons;
     private boolean powerUpStatus;
     private boolean monsterStatus;
-
+    
+    // see Player class for code clarifications
     /**
      * This is the contructor for PlayerF.
      */
     public PlayerF()
     {
-        speed = 6;
+        speed = 6; // initial speed of 6 for female
         cycleCountPow = 0;
         cycleCountMons = 0;
         powerUpStatus = false;
@@ -52,12 +53,12 @@ public class PlayerF extends Actor
             setLocation( getX(), getY()+speed );
         } // end if down
 
-        if (Greenfoot.isKeyDown( "left" ))
+        if (Greenfoot.isKeyDown( "left" )) // left arrow key to move left horizontally
         {
             setLocation( getX()-speed, getY() );
         } // end if left
 
-        if (Greenfoot.isKeyDown( "right" ))
+        if (Greenfoot.isKeyDown( "right" )) // right arrow key to move right horizontally
         {
             setLocation( getX()+speed, getY() );
         } // end if right
@@ -68,21 +69,21 @@ public class PlayerF extends Actor
      */
     public void collisionCheck()
     {
-        if ( isTouching(Pumpkin.class) )
+        if ( isTouching(Pumpkin.class) ) // gain points for collecting Pumpkins
         {
             removeTouching(Pumpkin.class);
             Bluffton bluffton = (Bluffton)getWorld();
             bluffton.addScore(50);
         } // end if
 
-        if ( isTouching(Berry.class) )
+        if ( isTouching(Berry.class) ) // gain points for collecting Berries
         {
             removeTouching(Berry.class);
             Bluffton bluffton = (Bluffton)getWorld();
             bluffton.addScore(25);
         } // end if
 
-        if ( isTouching(Squirrel.class) )
+        if ( isTouching(Squirrel.class) ) // lose points for hitting Squirrels
         {
             removeTouching(Squirrel.class);
             Greenfoot.playSound("au.wav");
@@ -90,7 +91,7 @@ public class PlayerF extends Actor
             bluffton.addScore(-30);
         } // end if
 
-        if ( isTouching(Pig.class) )
+        if ( isTouching(Pig.class) ) // lose points for hitting Pigs
         {
             removeTouching(Pig.class);
             Greenfoot.playSound("au.wav");

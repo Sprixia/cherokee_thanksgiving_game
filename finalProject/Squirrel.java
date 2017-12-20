@@ -20,7 +20,7 @@ public class Squirrel extends Actor
     /**
      * Controls the movement of Squirrels.
      */
-    public void movement() 
+    public void movement() // move left and counterclockwise
     {
         setLocation( getX()-2, getY() );
         turn(-1);
@@ -29,7 +29,7 @@ public class Squirrel extends Actor
     /**
      * Removes squirrels that have crossed the entire screen.
      */
-    public void cleanUp()
+    public void cleanUp() // remove at left edge of world
     {
         if ( getX() == 0 )
         {

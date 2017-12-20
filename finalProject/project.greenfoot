@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Dec 14 15:12:18 EST 2017
+#Tue Dec 19 17:20:33 EST 2017
 editor.fx.0.height=726
 target2.width=80
 class.Pig.superclass=greenfoot.Actor
@@ -147,14 +147,14 @@ package.numTargets=9
 dependency15.type=UsesDependency
 dependency1.type=UsesDependency
 target4.type=ClassTarget
-class.Berry.superclass=greenfoot.Actor
 target8.width=80
+class.Berry.superclass=greenfoot.Actor
 dependency8.to=Bluffton
 dependency19.type=UsesDependency
 target9.width=80
 target7.height=50
-dependency5.type=UsesDependency
 dependency20.to=Powerup
+dependency5.type=UsesDependency
 target8.type=ClassTarget
 dependency18.to=Squirrel
 dependency13.from=PlayerF
@@ -175,10 +175,10 @@ dependency4.to=Berry
 class.Player.superclass=greenfoot.Actor
 target4.name=Monster
 readme.y=10
-readme.x=10
 class.Monster.superclass=greenfoot.Actor
+readme.x=10
 target4.height=50
 readme.height=58
 target1.width=80
-dependency14.to=Monster
 class.Monster.image=skull.png
+dependency14.to=Monster

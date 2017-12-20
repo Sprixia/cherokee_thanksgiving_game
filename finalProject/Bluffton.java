@@ -17,6 +17,7 @@ public class Bluffton extends World
      */
     public Bluffton()
     {    
+        // TODO: Add welcome screen & instructions screen
         super(900, 350, 1); 
         setupStatus = true; // defaults to true
         prepare();
@@ -42,18 +43,20 @@ public class Bluffton extends World
      */
     public void characterSelect()
     {
-        if ( setupStatus )
+        // TODO: change boolean to male/female, add validation
+        
+        if ( setupStatus ) // if setupStatus is true (set to true in constructor)
         {
-            boolean playerChoice = true;
+            boolean playerChoice = true; // first, set to false
             String playerChar = Greenfoot.ask("Type true to play female, and false to play male.");
             playerChoice = Boolean.parseBoolean( playerChar );
 
-            if ( !playerChoice )
+            if ( !playerChoice ) // if the value is false, play male
             {
                 Player player = new Player();
                 addObject( player, 35, 175);
             } 
-            else {
+            else { // if the value is not false, play female
                 PlayerF playerf = new PlayerF();
                 addObject( playerf, 35, 175 );
             } // end nested if-else
@@ -117,9 +120,9 @@ public class Bluffton extends World
     /**
      * Adds points earned to the score that displays on screen.
      */
-    public void addScore(int points)
+    public void addScore(int points) // allows Player and PlayerF to input points and increase score 
     {
-        score = score + points;
+        score = score + points;  // adds new point value to the current score
         showScore();
 
         if (score < 0)
@@ -136,7 +139,7 @@ public class Bluffton extends World
      */
     public void countTime()
     {
-        time--;
+        time--; // decrement time by 1 
         showTime();
 
         if (time == 0)

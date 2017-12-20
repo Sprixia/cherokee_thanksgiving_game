@@ -20,7 +20,7 @@ public class Pig extends Actor
     /**
      * Controls the movement of Pig.
      */
-    public void movement() 
+    public void movement() // moves left and counterclockwise
     {
         setLocation( getX()-4, getY() );
         turn(-1);
@@ -29,7 +29,7 @@ public class Pig extends Actor
     /**
      * Removes Pig that have crossed the entire screen.
      */
-    public void cleanUp()
+    public void cleanUp() // removes at left edge of world
     {
         if ( getX() == 0 )
         {
